@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- <link rel="icon" type="image/x-icon" href="/favicon.ico"> -->
+<link rel="icon" type="image/png" href="favicon.png">
+<title>Hassaan Saleh — WordPress & Full-Stack Web Developer</title>
+<meta name="description" content="Muhammad Hassaan Saleh builds fast, reliable WordPress and full-stack websites for real businesses — from custom themes to backend systems in Django, Flask, and .NET." />
+<meta name="keywords" content="WordPress Developer, Full-Stack Developer, Elementor, Django, Flask, Hassaan Saleh" />
+<meta name="author" content="Muhammad Hassaan Saleh" />
+<meta property="og:title" content="Hassaan Saleh — WordPress & Full-Stack Web Developer" />
+<meta property="og:description" content="Building websites that businesses actually use — WordPress, Django, Flask, and .NET." />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="robots" content="index, follow" />
+
+<!-- Theme is applied before first paint to avoid a flash of the wrong mode -->
+<script>
+  (function () {
+    try {
+      var saved = localStorage.getItem("theme");
+      var theme = saved === "dark" || saved === "light" ? saved : "light";
+      document.documentElement.setAttribute("data-theme", theme);
+    } catch (e) {
+      document.documentElement.setAttribute("data-theme", "light");
+    }
+  })();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<svg class="svg-defs" aria-hidden="true" focusable="false">
+  <defs>
+    <pattern id="bp2" width="16" height="16" patternUnits="userSpaceOnUse">
+      <path d="M16 0 0 0 0 16" fill="none" stroke="var(--grid-dot)" stroke-width="1"/>
+    </pattern>
+  </defs>
+</svg>
+
+<!-- ==========================================================================
+     Nav
+     ========================================================================== -->
+<header class="nav">
+  <nav class="wrap nav-inner">
+    <a href="#top" class="logo">Hassaan<span>.</span></a>
+
+    <ul class="nav-links">
+      <li><a href="#work">Work</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#work">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <button class="theme-toggle" aria-label="Switch to dark mode" type="button">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      </button>
+      <a href="#contact" class="btn-primary-sm">Start a project</a>
+    </div>
+
+    <button class="menu-btn" aria-label="Open menu" aria-expanded="false" type="button">
+      <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </nav>
+
+  <div class="mobile-menu">
+    <ul>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#work">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li>
+        <button class="theme-toggle" aria-label="Switch to dark mode" type="button" style="margin-right:8px;">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        </button>
+        <a href="#contact" class="btn-primary-sm">Start a project</a>
+      </li>
+    </ul>
+  </div>
+</header>
+
+<main>
+
+  <!-- ========================================================================
+       Hero
+       ======================================================================== -->
+  <section id="top" class="hero">
+    <svg class="hero-grid-bg dot-grid mask-fade-b" aria-hidden="true"></svg>
+
+    <div class="hero-inner">
+      <div>
+        <p class="eyebrow reveal is-visible">WordPress Developer &amp; Full-Stack Web Developer</p>
+        <h1 class="hero-headline reveal is-visible">Building websites that businesses actually use.</h1>
+        <p class="hero-sub reveal is-visible">
+          I design and build WordPress sites and full-stack web applications for real clients — from Elementor storefronts to backend systems in Django, Flask, and .NET. Currently a Computer Science student sharpening the backend engineering side of that work.
+        </p>
+
+        <div class="hero-actions reveal is-visible">
+          <a href="#work" class="btn-accent">View Projects</a>
+          <a href="resume/Hassaan-Saleh-Resume.pdf" download class="btn-outline">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download Resume
+          </a>
+        </div>
+
+        <div class="reveal is-visible">
+          <p class="hero-tech-label">Working across</p>
+          <ul class="hero-tech-row mono">
+            <li>WordPress</li>
+            <li>Django</li>
+            <li>Flask</li>
+            <li>.NET</li>
+            <li>Git</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="hero-portrait-wrap reveal is-visible">
+        <div class="frame-portrait" role="img" aria-label="Professional portrait of Muhammad Hassaan Saleh">
+          <a class="screenshot-link" href="images/placeholders/hassaan (1).png" aria-label="Preview portrait image">
+            <img class="frame-image" src="images/placeholders/hassaan (1).png" alt="Professional portrait of Muhammad Hassaan Saleh" />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <a href="#work" aria-label="Scroll to selected work" class="hero-scroll-cue">
+      Scroll
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+    </a>
+  </section>
+
+  <div class="hairline"></div>
+
+  <!-- ========================================================================
+       Selected Work
+       ======================================================================== -->
+  <section id="work" class="section">
+    <div class="wrap">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Selected Work</p>
+        <h2 class="section-title">Projects built for real businesses</h2>
+        <p class="section-desc">Each one shipped to a client's live site — layouts, storefronts, and services built to be used, not just viewed.</p>
+      </div>
+
+      <div class="project-grid">
+
+        <!-- LooksPlus -->
+        <article class="project-card reveal">
+          <div class="project-header">
+            <h3 class="project-title">LooksPlus</h3>
+            <p class="project-desc">Developed a fast, SEO-optimized WordPress website for a non-surgical hair replacement clinic in Patna, featuring online appointment booking, service pages, WhatsApp integration, and a mobile-first design focused on generating local leads.</p>
+          </div>
+          
+          <div class="project-mockups">
+            <div class="mockup-desktop">
+              <div class="macbook">
+                <div class="macbook-notch"></div>
+                <div class="macbook-screen">
+                  <img class="mockup-image" src="images/placeholders/looksplus.webp" alt="LooksPlus desktop view" loading="lazy" data-scrollable="true" />
+                </div>
+                <div class="macbook-base"></div>
+              </div>
+            </div>
+            
+            <div class="mockup-mobile">
+              <div class="iphone">
+                <div class="iphone-speaker-top"></div>
+                <div class="iphone-dynamic-island"></div>
+                <div class="iphone-speaker-bottom"></div>
+                <div class="iphone-status-bar">
+                  <div class="status-left">
+                    <span class="status-time">9:41</span>
+                  </div>
+                  <div class="status-right">
+                    <svg class="status-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3c-1.65-1.66-4.34-1.66-6 0zm-4-4l2 2c2.76-2.76 7.24-2.76 10 0l2-2C15.14 9.14 8.87 9.14 5 13z"/></svg>
+                    <svg class="status-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3c-1.65-1.66-4.34-1.66-6 0zm-4-4l2 2c2.76-2.76 7.24-2.76 10 0l2-2C15.14 9.14 8.87 9.14 5 13z"/></svg>
+                    <svg class="status-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M15.67 4H14V2h-4v2H8.33C7.6 4 7 4.6 7 5.33v15.34C7 21.4 7.6 22 8.33 22h7.34c.73 0 1.33-.6 1.33-1.33V5.33C17 4.6 16.4 4 15.67 4z"/></svg>
+                  </div>
+                </div>
+                <div class="iphone-screen">
+                  <img class="mockup-image" src="images/placeholders/looks-plus.webp" alt="LooksPlus mobile view" loading="lazy" data-scrollable="true" />
+                  <div class="iphone-home-indicator"></div>
+                </div>
+                <div class="iphone-frame"></div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-footer">
+            <ul class="project-tech"><li>• WordPress</li><li>• Elementor</li><li>• Custom CSS</li><li>• Responsive Design</li><li>• Local SEO</li></ul>
+            <div class="project-links">
+              <a href="https://looksplus.in/" target="_blank" rel="noopener noreferrer">Visit website <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Targeted Growth -->
+        <article class="project-card reveal">
+          <div class="project-header">
+            <h3 class="project-title">Targeted Growth</h3>
+            <p class="project-desc">Developed a high-performance WordPress website for a digital marketing agency, featuring conversion-focused landing pages, responsive design, SEO best practices, and strategically placed CTAs to maximize lead generation.</p>
+          </div>
+          
+          <div class="project-mockups">
+            <div class="mockup-desktop">
+              <div class="macbook">
+                <div class="macbook-notch"></div>
+                <div class="macbook-screen">
+                  <img class="mockup-image" src="images/placeholders/targeted-growth.webp" alt="Targeted Growth desktop view" loading="lazy" data-scrollable="true" />
+                </div>
+                <div class="macbook-base"></div>
+              </div>
+            </div>
+            
+            <div class="mockup-mobile">
+              <div class="iphone">
+                <div class="iphone-speaker-top"></div>
+                <div class="iphone-dynamic-island"></div>
+                <div class="iphone-speaker-bottom"></div>
+                <div class="iphone-status-bar">
+                  <div class="status-left">
+                    <span class="status-time">9:41</span>
+                  </div>
+                  <div class="status-right">
+                    <svg class="status-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3c-1.65-1.66-4.34-1.66-6 0zm-4-4l2 2c2.76-2.76 7.24-2.76 10 0l2-2C15.14 9.14 8.87 9.14 5 13z"/></svg>
+                    <svg class="status-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3c-1.65-1.66-4.34-1.66-6 0zm-4-4l2 2c2.76-2.76 7.24-2.76 10 0l2-2C15.14 9.14 8.87 9.14 5 13z"/></svg>
+                    <svg class="status-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M15.67 4H14V2h-4v2H8.33C7.6 4 7 4.6 7 5.33v15.34C7 21.4 7.6 22 8.33 22h7.34c.73 0 1.33-.6 1.33-1.33V5.33C17 4.6 16.4 4 15.67 4z"/></svg>
+                  </div>
+                </div>
+                <div class="iphone-screen">
+                  <img class="mockup-image" src="images/placeholders/targeted-growth-mobile.webp" alt="Targeted Growth mobile view" loading="lazy" data-scrollable="true" />
+                  <div class="iphone-home-indicator"></div>
+                </div>
+                <div class="iphone-frame"></div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-footer">
+            <ul class="project-tech"><li>• WordPress</li><li>• Custom Theme Development</li><li>• Elementor</li><li>• Custom CSS</li><li>• Technical SEO</li></ul>
+            <div class="project-links">
+              <a href="https://targeted-growth.com/" target="_blank" rel="noopener noreferrer">Visit website <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Zylva -->
+        <article class="project-card reveal">
+          <div class="project-header">
+            <span class="project-badge" aria-label="Project status">Currently in Development</span>
+            <h3 class="project-title">Zylva</h3>
+            <p class="project-desc">Developing an SEO-friendly WooCommerce website for a premium jewelry brand, featuring responsive design, optimized product pages, and a streamlined shopping journey to enhance user experience.</p>
+          </div>
+          
+          
+          <div class="project-mockups">
+            <div class="mockup-desktop">
+              <div class="macbook">
+                <div class="macbook-notch"></div>
+                <div class="macbook-screen">
+                  <img class="mockup-image" src="images/placeholders/zylva.webp" alt="Zylva desktop view" loading="lazy" data-scrollable="true" />
+                </div>
+                <div class="macbook-base"></div>
+              </div>
+            </div>
+            
+            <div class="mockup-mobile">
+              <div class="iphone">
+                <div class="iphone-speaker-top"></div>
+                <div class="iphone-dynamic-island"></div>
+                <div class="iphone-speaker-bottom"></div>
+                <div class="iphone-status-bar">
+                  <div class="status-left">
+                    <span class="status-time">9:41</span>
+                  </div>
+                  <div class="status-right">
+                    <svg class="status-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3c-1.65-1.66-4.34-1.66-6 0zm-4-4l2 2c2.76-2.76 7.24-2.76 10 0l2-2C15.14 9.14 8.87 9.14 5 13z"/></svg>
+                    <svg class="status-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3c-1.65-1.66-4.34-1.66-6 0zm-4-4l2 2c2.76-2.76 7.24-2.76 10 0l2-2C15.14 9.14 8.87 9.14 5 13z"/></svg>
+                    <svg class="status-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M15.67 4H14V2h-4v2H8.33C7.6 4 7 4.6 7 5.33v15.34C7 21.4 7.6 22 8.33 22h7.34c.73 0 1.33-.6 1.33-1.33V5.33C17 4.6 16.4 4 15.67 4z"/></svg>
+                  </div>
+                </div>
+                <div class="iphone-screen">
+                  <img class="mockup-image" src="images/placeholders/zylva-mobile.webp" alt="Zylva mobile view" loading="lazy" data-scrollable="true" />
+                  <div class="iphone-home-indicator"></div>
+                </div>
+                <div class="iphone-frame"></div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-footer">
+            <ul class="project-tech"><li>• WordPress</li><li>• Elementor</li><li>• WooCommerce</li><li>• Theme Customisation</li><li>• Performance Optimization</li></ul>
+            <div class="project-links">
+              <a href="https://zylva.co/" target="_blank" rel="noopener noreferrer">Visit website <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- klippare -->
+        <article class="project-card reveal">
+          <div class="project-header">
+            <h3 class="project-title">klippare</h3>
+            <p class="project-desc">Built a modern WordPress website for a lawn mower comparison platform, implementing responsive layouts, SEO-friendly content structure, and product comparison pages to help users make informed purchasing decisions.</p>
+          </div>
+          
+          <div class="project-mockups">
+            <div class="mockup-desktop">
+              <div class="macbook">
+                <div class="macbook-notch"></div>
+                <div class="macbook-screen">
+                  <img class="mockup-image" src="images/placeholders/klippare-desktop.webp" alt="Shopingia desktop view" loading="lazy" data-scrollable="true" />
+                </div>
+                <div class="macbook-base"></div>
+              </div>
+            </div>
+            
+            <div class="mockup-mobile">
+              <div class="iphone">
+                <div class="iphone-speaker-top"></div>
+                <div class="iphone-dynamic-island"></div>
+                <div class="iphone-speaker-bottom"></div>
+                <div class="iphone-status-bar">
+                  <div class="status-left">
+                    <span class="status-time">9:41</span>
+                  </div>
+                  <div class="status-right">
+                    <svg class="status-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3c-1.65-1.66-4.34-1.66-6 0zm-4-4l2 2c2.76-2.76 7.24-2.76 10 0l2-2C15.14 9.14 8.87 9.14 5 13z"/></svg>
+                    <svg class="status-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3c-1.65-1.66-4.34-1.66-6 0zm-4-4l2 2c2.76-2.76 7.24-2.76 10 0l2-2C15.14 9.14 8.87 9.14 5 13z"/></svg>
+                    <svg class="status-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M15.67 4H14V2h-4v2H8.33C7.6 4 7 4.6 7 5.33v15.34C7 21.4 7.6 22 8.33 22h7.34c.73 0 1.33-.6 1.33-1.33V5.33C17 4.6 16.4 4 15.67 4z"/></svg>
+                  </div>
+                </div>
+                <div class="iphone-screen">
+                  <img class="mockup-image" src="images/placeholders/klippare_mobile.webp" alt="klippare mobile view" loading="lazy" data-scrollable="true" />
+                  <div class="iphone-home-indicator"></div>
+                </div>
+                <div class="iphone-frame"></div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-footer">
+            <ul class="project-tech"><li>• WordPress</li><li>• Responsive Design</li><li>• Elementor</li><li>• Custom Theme</li><li>• Technical SEO</li></ul>
+            <div class="project-links">
+              <a href="https://klippare.iceiy.com/" target="_blank" rel="noopener noreferrer">Visit website <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
+            </div>
+          </div>
+        </article>
+        <!-- Shopingia -->
+<article class="project-card reveal">
+          <div class="project-header">
+            <h3 class="project-title">Shopingia</h3>
+            <p class="project-desc">Built a modern WordPress eCommerce website with WooCommerce and Elementor, focusing on responsive design, user-friendly navigation, optimized product listings, and a seamless shopping experience across all devices.</p>
+          </div>
+          
+          <div class="project-mockups">
+            <div class="mockup-desktop">
+              <div class="macbook">
+                <div class="macbook-notch"></div>
+                <div class="macbook-screen">
+                  <img class="mockup-image" src="images/placeholders/shopinigia.webp" alt="Shopingia desktop view" loading="lazy" data-scrollable="true" />
+                </div>
+                <div class="macbook-base"></div>
+              </div>
+            </div>
+            
+            <div class="mockup-mobile">
+              <div class="iphone">
+                <div class="iphone-speaker-top"></div>
+                <div class="iphone-dynamic-island"></div>
+                <div class="iphone-speaker-bottom"></div>
+                <div class="iphone-status-bar">
+                  <div class="status-left">
+                    <span class="status-time">9:41</span>
+                  </div>
+                  <div class="status-right">
+                    <svg class="status-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3c-1.65-1.66-4.34-1.66-6 0zm-4-4l2 2c2.76-2.76 7.24-2.76 10 0l2-2C15.14 9.14 8.87 9.14 5 13z"/></svg>
+                    <svg class="status-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3c-1.65-1.66-4.34-1.66-6 0zm-4-4l2 2c2.76-2.76 7.24-2.76 10 0l2-2C15.14 9.14 8.87 9.14 5 13z"/></svg>
+                    <svg class="status-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M15.67 4H14V2h-4v2H8.33C7.6 4 7 4.6 7 5.33v15.34C7 21.4 7.6 22 8.33 22h7.34c.73 0 1.33-.6 1.33-1.33V5.33C17 4.6 16.4 4 15.67 4z"/></svg>
+                  </div>
+                </div>
+                <div class="iphone-screen">
+                  <img class="mockup-image" src="images/placeholders/shopingia-mobile.webp" alt="Shopingia mobile view" loading="lazy" data-scrollable="true" />
+                  <div class="iphone-home-indicator"></div>
+                </div>
+                <div class="iphone-frame"></div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-footer">
+            <ul class="project-tech"><li>• WordPress</li><li>• WooCommerce</li><li>• Elementor</li><li>• Custom Theme</li></ul>
+            <div class="project-links">
+              <a href="https://shopingia.iceiy.com/" target="_blank" rel="noopener noreferrer">Visit website <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Salman -->
+        <article class="project-card reveal">
+          <div class="project-header">
+            <h3 class="project-title">Salman Cooling and Geyser Center</h3>
+            <p class="project-desc">Developed a responsive WordPress website for an HVAC service provider, featuring SEO-optimized service pages, WhatsApp integration, and conversion-focused layouts to simplify customer inquiries and service bookings.</p>
+          </div>
+          
+          <div class="project-mockups">
+            <div class="mockup-desktop">
+              <div class="macbook">
+                <div class="macbook-notch"></div>
+                <div class="macbook-screen">
+                  <img class="mockup-image" src="images/placeholders/salmancenter.webp" alt="Salman Center desktop view" loading="lazy" data-scrollable="true" />
+                </div>
+                <div class="macbook-base"></div>
+              </div>
+            </div>
+            
+            <div class="mockup-mobile">
+              <div class="iphone">
+                <div class="iphone-speaker-top"></div>
+                <div class="iphone-dynamic-island"></div>
+                <div class="iphone-speaker-bottom"></div>
+                <div class="iphone-status-bar">
+                  <div class="status-left">
+                    <span class="status-time">9:41</span>
+                  </div>
+                  <div class="status-right">
+                    <svg class="status-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3c-1.65-1.66-4.34-1.66-6 0zm-4-4l2 2c2.76-2.76 7.24-2.76 10 0l2-2C15.14 9.14 8.87 9.14 5 13z"/></svg>
+                    <svg class="status-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3c-1.65-1.66-4.34-1.66-6 0zm-4-4l2 2c2.76-2.76 7.24-2.76 10 0l2-2C15.14 9.14 8.87 9.14 5 13z"/></svg>
+                    <svg class="status-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M15.67 4H14V2h-4v2H8.33C7.6 4 7 4.6 7 5.33v15.34C7 21.4 7.6 22 8.33 22h7.34c.73 0 1.33-.6 1.33-1.33V5.33C17 4.6 16.4 4 15.67 4z"/></svg>
+                  </div>
+                </div>
+                <div class="iphone-screen">
+                  <img class="mockup-image" src="images/placeholders/salman-mobile.webp" alt="Salman Center mobile view" loading="lazy" data-scrollable="true" />
+                  <div class="iphone-home-indicator"></div>
+                </div>
+                <div class="iphone-frame"></div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-footer">
+            <ul class="project-tech"><li>• WordPress</li><li>• Elementor</li><li>• Custom CSS</li><li>• Responsive Design</li><li>• Local SEO</li></ul>
+            <div class="project-links">
+              <a href="https://salman-cooling-geyser.com/" target="_blank" rel="noopener noreferrer">Visit website <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
+            </div>
+          </div>
+        </article>
+<!-- <article class="project-card reveal">
+          <div class="project-header">
+            <h3 class="project-title">Shopingia</h3>
+            <p class="project-desc">Built a modern WordPress eCommerce website with WooCommerce and Elementor, focusing on responsive design, user-friendly navigation, optimized product listings, and a seamless shopping experience across all devices.</p>
+          </div>
+          
+          <div class="project-mockups">
+            <div class="mockup-desktop">
+              <div class="macbook">
+                <div class="macbook-notch"></div>
+                <div class="macbook-screen">
+                  <img class="mockup-image" src="images/placeholders/shopinigia.webp" alt="Shopingia desktop view" loading="lazy" data-scrollable="true" />
+                </div>
+                <div class="macbook-base"></div>
+              </div>
+            </div>
+            
+            <div class="mockup-mobile">
+              <div class="iphone">
+                <div class="iphone-speaker-top"></div>
+                <div class="iphone-dynamic-island"></div>
+                <div class="iphone-speaker-bottom"></div>
+                <div class="iphone-status-bar">
+                  <div class="status-left">
+                    <span class="status-time">9:41</span>
+                  </div>
+                  <div class="status-right">
+                    <svg class="status-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3c-1.65-1.66-4.34-1.66-6 0zm-4-4l2 2c2.76-2.76 7.24-2.76 10 0l2-2C15.14 9.14 8.87 9.14 5 13z"/></svg>
+                    <svg class="status-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3c-1.65-1.66-4.34-1.66-6 0zm-4-4l2 2c2.76-2.76 7.24-2.76 10 0l2-2C15.14 9.14 8.87 9.14 5 13z"/></svg>
+                    <svg class="status-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M15.67 4H14V2h-4v2H8.33C7.6 4 7 4.6 7 5.33v15.34C7 21.4 7.6 22 8.33 22h7.34c.73 0 1.33-.6 1.33-1.33V5.33C17 4.6 16.4 4 15.67 4z"/></svg>
+                  </div>
+                </div>
+                <div class="iphone-screen">
+                  <img class="mockup-image" src="images/placeholders/shopingia-mobile.webp" alt="Shopingia mobile view" loading="lazy" data-scrollable="true" />
+                  <div class="iphone-home-indicator"></div>
+                </div>
+                <div class="iphone-frame"></div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-footer">
+            <ul class="project-tech"><li>• WordPress</li><li>• WooCommerce</li><li>• Elementor</li><li>• Custom Theme</li></ul>
+            <div class="project-links">
+              <a href="https://shopingia.iceiy.com/" target="_blank" rel="noopener noreferrer">Visit website <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
+            </div>
+          </div>
+        </article> -->
+
+        <!-- Infinity -->
+        <article class="project-card reveal">
+          <div class="project-header">
+            <h3 class="project-title">Infinity Tech</h3>
+            <p class="project-desc">Designed and developed a modern WordPress website for an IT services agency, featuring responsive layouts, SEO-friendly architecture, service-focused pages, and conversion-driven CTAs to generate qualified leads.</p>
+          </div>
+          
+          <div class="project-mockups">
+            <div class="mockup-desktop">
+              <div class="macbook">
+                <div class="macbook-notch"></div>
+                <div class="macbook-screen">
+                  <img class="mockup-image" src="images/placeholders/infinity-tech.webp" alt="Infinity tech desktop view" loading="lazy" data-scrollable="true" />
+                </div>
+                <div class="macbook-base"></div>
+              </div>
+            </div>
+            
+            <div class="mockup-mobile">
+              <div class="iphone">
+                <div class="iphone-speaker-top"></div>
+                <div class="iphone-dynamic-island"></div>
+                <div class="iphone-speaker-bottom"></div>
+                <div class="iphone-status-bar">
+                  <div class="status-left">
+                    <span class="status-time">9:41</span>
+                  </div>
+                  <div class="status-right">
+                    <svg class="status-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3c-1.65-1.66-4.34-1.66-6 0zm-4-4l2 2c2.76-2.76 7.24-2.76 10 0l2-2C15.14 9.14 8.87 9.14 5 13z"/></svg>
+                    <svg class="status-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3c-1.65-1.66-4.34-1.66-6 0zm-4-4l2 2c2.76-2.76 7.24-2.76 10 0l2-2C15.14 9.14 8.87 9.14 5 13z"/></svg>
+                    <svg class="status-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M15.67 4H14V2h-4v2H8.33C7.6 4 7 4.6 7 5.33v15.34C7 21.4 7.6 22 8.33 22h7.34c.73 0 1.33-.6 1.33-1.33V5.33C17 4.6 16.4 4 15.67 4z"/></svg>
+                  </div>
+                </div>
+                <div class="iphone-screen">
+                  <img class="mockup-image" src="images/placeholders/infinity-mobile.webp" alt="Infinity tech mobile view" loading="lazy" data-scrollable="true" />
+                  <div class="iphone-home-indicator"></div>
+                </div>
+                <div class="iphone-frame"></div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-footer">
+            <ul class="project-tech"><li>• WordPress</li><li>• Elementor</li><li>• Custom Theme Development</li><li>• Responsive Design</li></ul>
+            <div class="project-links">
+              <a href="https://infinityfree.iceiy.com/" target="_blank" rel="noopener noreferrer">Visit website <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Peptides First -->
+        <article class="project-card reveal">
+          <div class="project-header">
+            <h3 class="project-title">Peptides First</h3>
+            <p class="project-desc">Contributed to the frontend development of a healthcare website by building responsive WordPress pages with Elementor, emphasizing performance, accessibility, and a seamless user experience.</p>
+          </div>
+          
+          <div class="project-mockups">
+            <div class="mockup-desktop">
+              <div class="macbook">
+                <div class="macbook-notch"></div>
+                <div class="macbook-screen">
+                  <img class="mockup-image" src="images/placeholders/peptides-first.webp" alt="Peptides First desktop view" loading="lazy" data-scrollable="true" />
+                </div>
+                <div class="macbook-base"></div>
+              </div>
+            </div>
+            
+            <div class="mockup-mobile">
+              <div class="iphone">
+                <div class="iphone-speaker-top"></div>
+                <div class="iphone-dynamic-island"></div>
+                <div class="iphone-speaker-bottom"></div>
+                <div class="iphone-status-bar">
+                  <div class="status-left">
+                    <span class="status-time">9:41</span>
+                  </div>
+                  <div class="status-right">
+                    <svg class="status-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3c-1.65-1.66-4.34-1.66-6 0zm-4-4l2 2c2.76-2.76 7.24-2.76 10 0l2-2C15.14 9.14 8.87 9.14 5 13z"/></svg>
+                    <svg class="status-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3c-1.65-1.66-4.34-1.66-6 0zm-4-4l2 2c2.76-2.76 7.24-2.76 10 0l2-2C15.14 9.14 8.87 9.14 5 13z"/></svg>
+                    <svg class="status-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M15.67 4H14V2h-4v2H8.33C7.6 4 7 4.6 7 5.33v15.34C7 21.4 7.6 22 8.33 22h7.34c.73 0 1.33-.6 1.33-1.33V5.33C17 4.6 16.4 4 15.67 4z"/></svg>
+                  </div>
+                </div>
+                <div class="iphone-screen">
+                  <img class="mockup-image" src="images/placeholders/peptides-first-mobile.webp" alt="Peptides First mobile view" loading="lazy" data-scrollable="true" />
+                  <div class="iphone-home-indicator"></div>
+                </div>
+                <div class="iphone-frame"></div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-footer">
+            <ul class="project-tech"><li>• WordPress</li><li>• Custom Theme</li><li>• On-Page SEO</li><li>• Responsive Design</li></ul>
+            <div class="project-links">
+              <a href="https://peptidesfirst.com/" target="_blank" rel="noopener noreferrer">Visit website <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Aqibac Services -->
+        <article class="project-card reveal">
+          <div class="project-header">
+            <h3 class="project-title">Aqibac Services</h3>
+            <p class="project-desc">Designed and developed a professional WordPress website for an HVAC company, combining modern UI, responsive development, SEO-friendly architecture, and lead-focused user journeys to strengthen its online presence.</p>
+          </div>
+          
+          <div class="project-mockups">
+            <div class="mockup-desktop">
+              <div class="macbook">
+                <div class="macbook-notch"></div>
+                <div class="macbook-screen">
+                  <img class="mockup-image" src="images/placeholders/aqibacservices.webp" alt="Aqibac Services desktop view" loading="lazy" data-scrollable="true" />
+                </div>
+                <div class="macbook-base"></div>
+              </div>
+            </div>
+            
+            <div class="mockup-mobile">
+              <div class="iphone">
+                <div class="iphone-speaker-top"></div>
+                <div class="iphone-dynamic-island"></div>
+                <div class="iphone-speaker-bottom"></div>
+                <div class="iphone-status-bar">
+                  <div class="status-left">
+                    <span class="status-time">9:41</span>
+                  </div>
+                  <div class="status-right">
+                    <svg class="status-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3c-1.65-1.66-4.34-1.66-6 0zm-4-4l2 2c2.76-2.76 7.24-2.76 10 0l2-2C15.14 9.14 8.87 9.14 5 13z"/></svg>
+                    <svg class="status-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3c-1.65-1.66-4.34-1.66-6 0zm-4-4l2 2c2.76-2.76 7.24-2.76 10 0l2-2C15.14 9.14 8.87 9.14 5 13z"/></svg>
+                    <svg class="status-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M15.67 4H14V2h-4v2H8.33C7.6 4 7 4.6 7 5.33v15.34C7 21.4 7.6 22 8.33 22h7.34c.73 0 1.33-.6 1.33-1.33V5.33C17 4.6 16.4 4 15.67 4z"/></svg>
+                  </div>
+                </div>
+                <div class="iphone-screen">
+                  <img class="mockup-image" src="images/placeholders/aqib-mobile.webp" alt="Aqibac Services mobile view" loading="lazy" data-scrollable="true" />
+                  <div class="iphone-home-indicator"></div>
+                </div>
+                <div class="iphone-frame"></div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-footer">
+            <ul class="project-tech"><li>• WordPress</li><li>• Elementor</li><li>• Custom Theme Development</li><li>• Responsive Design</li><li>On-page SEO</li></ul>
+            <div class="project-links">
+              <a href="https://aqibacservices.com/" target="_blank" rel="noopener noreferrer">Visit website <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Portfolio Website -->
+        <article class="project-card reveal">
+          <div class="project-header">
+            <h3 class="project-title">Portfolio Website</h3>
+            <p class="project-desc">This site — built with plain HTML, CSS, and JavaScript to keep the stack close to the fundamentals I use day to day.</p>
+          </div>
+          
+          <div class="project-mockups">
+            <div class="mockup-desktop">
+              <div class="macbook">
+                <div class="macbook-notch"></div>
+                <div class="macbook-screen">
+                  <img class="mockup-image" src="images/placeholders/portfolio.webp" alt="Portfolio desktop view" loading="lazy" data-scrollable="true" />
+                </div>
+                <div class="macbook-base"></div>
+              </div>
+            </div>
+            
+            <div class="mockup-mobile">
+              <div class="iphone">
+                <div class="iphone-speaker-top"></div>
+                <div class="iphone-dynamic-island"></div>
+                <div class="iphone-speaker-bottom"></div>
+                <div class="iphone-status-bar">
+                  <div class="status-left">
+                    <span class="status-time">9:41</span>
+                  </div>
+                  <div class="status-right">
+                    <svg class="status-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3c-1.65-1.66-4.34-1.66-6 0zm-4-4l2 2c2.76-2.76 7.24-2.76 10 0l2-2C15.14 9.14 8.87 9.14 5 13z"/></svg>
+                    <svg class="status-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3c-1.65-1.66-4.34-1.66-6 0zm-4-4l2 2c2.76-2.76 7.24-2.76 10 0l2-2C15.14 9.14 8.87 9.14 5 13z"/></svg>
+                    <svg class="status-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M15.67 4H14V2h-4v2H8.33C7.6 4 7 4.6 7 5.33v15.34C7 21.4 7.6 22 8.33 22h7.34c.73 0 1.33-.6 1.33-1.33V5.33C17 4.6 16.4 4 15.67 4z"/></svg>
+                  </div>
+                </div>
+                <div class="iphone-screen">
+                  <img class="mockup-image" src="images/placeholders/portfolio (1).webp" alt="Portfolio mobile view" loading="lazy" data-scrollable="true" />
+                  <div class="iphone-home-indicator"></div>
+                </div>
+                <div class="iphone-frame"></div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-footer">
+            <ul class="project-tech"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+            <div class="project-links">
+              <span class="disabled">View code <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="hairline"></div>
+
+  <!-- ========================================================================
+       Experience
+       ======================================================================== -->
+  <section id="experience" class="section">
+    <div class="wrap">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Experience</p>
+        <h2 class="section-title">Where the work has happened</h2>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-rail"></div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-head">
+            <h3 class="timeline-role">WordPress Developer <span class="company">· Global Web Daddy</span></h3>
+            <span class="timeline-period mono">Dec 2025 – May 2026</span>
+          </div>
+          <ul class="timeline-bullets">
+            <li>Built and maintained responsive WordPress websites for client projects, from initial layout to launch.</li>
+            <li>Developed page layouts and custom sections in Elementor and Gutenberg.</li>
+            <li>Updated and configured plugins to keep client sites secure and functional.</li>
+            <li>Diagnosed and fixed front-end and back-end bugs across live sites.</li>
+            <li>Communicated directly with clients to translate requirements into working features.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="hairline"></div>
+
+  <!-- ========================================================================
+       Skills
+       ======================================================================== -->
+  <section id="skills" class="section">
+    <div class="wrap">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Skills</p>
+        <h2 class="section-title">Tools I build with</h2>
+        <p class="section-desc">Grouped by where they show up in a project, not ranked by comfort level.</p>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-card reveal">
+          <h3>Frontend</h3>
+          <ul><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Responsive Design</li></ul>
+        </div>
+        <div class="skill-card reveal reveal-delay-1">
+          <h3>Backend</h3>
+          <ul><li>Flask</li><li>Django</li><li>ASP.NET</li><li>C#</li></ul>
+        </div>
+        <div class="skill-card reveal reveal-delay-2">
+          <h3>WordPress</h3>
+          <ul><li>Elementor</li><li>Custom Themes</li><li>Gutenberg</li><li>Plugin Management</li></ul>
+        </div>
+        <div class="skill-card reveal reveal-delay-3">
+          <h3>Tools</h3>
+          <ul><li>Git</li><li>GitHub</li><li>Web Scraping</li><li>Tkinter</li><li>Data Analysis</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="hairline"></div>
+
+  <!-- ========================================================================
+       About
+       ======================================================================== -->
+  <section id="about" class="section">
+    <div class="about-grid">
+      <div class="reveal">
+        <div class="frame-tile tall" role="img" aria-label="Professional developer working on a web application">
+          <svg class="grid-svg" aria-hidden="true"><rect width="100%" height="100%" fill="url(#bp2)"/></svg>
+          <div class="frame-content"><img class="frame-image" src="images/placeholders/hassaan (2).png" alt="Professional portrait of Muhammad Hassaan Saleh" />
+</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="section-heading reveal">
+          <p class="eyebrow">About</p>
+          <h2 class="section-title">A developer who ships, then keeps learning</h2>
+        </div>
+        <div class="about-copy">
+          <p class="reveal">I'm a Computer Science student who builds websites for a living and studies systems for fun. Client work with Global Web Daddy has given me hands-on experience shipping WordPress sites that real businesses depend on — from first layout to the plugin update six months later.</p>
+          <p class="reveal reveal-delay-1">That work has pointed me toward the backend: how a site behaves under real traffic, how data moves between a form and a database, how a service stays up. Outside client projects, I build small tools in Flask, Django, and ASP.NET to keep that side of the craft sharp, and I treat every project — client or personal — as a chance to learn something I didn't know going in.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="hairline"></div>
+
+  <!-- ========================================================================
+       Why Work With Me
+       ======================================================================== -->
+  <section id="why-work-with-me" class="section">
+    <div class="wrap">
+      <div class="section-heading reveal">
+        <p class="eyebrow">WHY WORK WITH ME</p>
+        <h2 class="section-title">Built with quality, performance, and business goals in mind.</h2>
+        <p class="section-desc">Every project I build is designed to be fast, responsive, maintainable, and focused on delivering real value—not just looking good.</p>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-card reveal">
+          <div class="why-icon" aria-hidden="true">⚡</div>
+          <h3 class="why-title">Performance First</h3>
+          <p class="why-desc">Optimized for fast loading, responsive layouts, clean implementation, and excellent user experience across all devices.</p>
+        </div>
+
+        <div class="why-card reveal reveal-delay-1">
+          <div class="why-icon" aria-hidden="true">🎯</div>
+          <h3 class="why-title">Business-Focused</h3>
+          <p class="why-desc">Every website is built with clear user journeys, strong calls-to-action, and practical solutions that help businesses generate leads and grow online.</p>
+        </div>
+
+        <div class="why-card reveal reveal-delay-2">
+          <div class="why-icon" aria-hidden="true">🔍</div>
+          <h3 class="why-title">SEO &amp; Accessibility</h3>
+          <p class="why-desc">Semantic structure, mobile-friendly layouts, and SEO best practices to improve visibility and usability.</p>
+        </div>
+
+        <div class="why-card reveal reveal-delay-3">
+          <div class="why-icon" aria-hidden="true">🤝</div>
+          <h3 class="why-title">Reliable Development</h3>
+          <p class="why-desc">Clear communication, attention to detail, maintainable code, and a commitment to delivering polished, production-ready websites.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="hairline"></div>
+
+  <!-- ========================================================================
+       Contact
+       ======================================================================== -->
+  <section id="contact" class="section">
+    <div class="wrap">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Contact</p>
+        <h2 class="section-title">Have a project in mind?</h2>
+        <p class="section-desc">Reach out directly, or send a note through the form and I'll get back to you.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-links reveal">
+          <!-- TODO: replace each placeholder value/href below with your real details -->
+          <div class="contact-link">
+            <span class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z" opacity="0"/><path d="M22 6c0-1.1-.9-2-2-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6z"/><polyline points="22 6 12 13 2 6"/></svg></span>
+            <div>
+              <p class="contact-label">Email</p>
+              <p class="contact-value">hassaansaleh56@gmail.com</p>
+            </div>
+          </div>
+          <div class="contact-link">
+            <span class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+            <div>
+              <p class="contact-label">Phone</p>
+              <p class="contact-value">+923127362825</p>
+            </div>
+          </div>
+          <div class="contact-link">
+            <span class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></span>
+            <div>
+              <p class="contact-label">GitHub</p>
+              <p class="contact-value">https://github.com/saleh56758</p>
+            </div>
+          </div>
+          <div class="contact-link">
+            <span class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></span>
+            <div>
+              <p class="contact-label">LinkedIn</p>
+              <p class="contact-value">www.linkedin.com/in/muhammad-hassaan-saleh-3075a6274</p>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form reveal reveal-delay-1" id="contactForm">
+          <div class="form-field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required />
+          </div>
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required />
+          </div>
+          <div class="form-field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="form-submit">Send message</button>
+          <p class="form-status" role="status" aria-live="polite">Thanks — this demo form isn't connected to an inbox yet, but your message would go straight to me once it is.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ========================================================================
+     Footer
+     ======================================================================== -->
+<footer class="footer">
+  <div class="hairline"></div>
+  <div class="footer-inner">
+    <p class="footer-name">Hassaan Saleh</p>
+    <p class="footer-tag">Built with modern web technologies.</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
