@@ -1193,11 +1193,93 @@ html[data-theme="dark"] .macbook-screen {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+  /* ================================================================
+     Tablet/Mobile polish (keep desktop EXACTLY the same)
+     - Trim hero whitespace and improve text/CTA spacing.
+     - Prevent long lines from causing awkward wrapping/overflow.
+     ================================================================ */
+  .hero {
+    /* Slightly reduce vertical whitespace below 768px while keeping
+       the desktop hero untouched. */
+    padding-block: 110px 24px;
+  }
+
+  .hero-inner {
+    /* Tighten the grid rhythm so the portrait doesn't create extra
+       vertical whitespace on small screens. */
+    gap: 30px;
+  }
+
+  .hero-headline {
+    /* Reduce wrapping pressure by allowing a bit more characters
+       per line and using a slightly tighter line-height. */
+    font-size: 2.25rem;
+    line-height: 1.08;
+    max-width: 16.5ch;
+  }
+
+  .hero-sub {
+    /* Keep readability but reduce total height + maintain
+       consistent spacing under the headline. */
+    margin-top: 14px;
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 56ch;
+  }
+
+  .hero-actions {
+    /* Ensure buttons wrap naturally without overflowing. */
+    margin-top: 20px;
+    gap: 12px;
+  }
+
+  .hero-actions .btn-accent,
+  .hero-actions .btn-outline {
+    /* Let buttons take available width when needed (e.g., 320px). */
+    max-width: 100%;
+    white-space: nowrap;
+  }
+
+  .hero-tech-label {
+    margin-top: 28px;
+  }
+
+  .hero-portrait-wrap {
+    /* Scale down the portrait area to avoid excess whitespace. */
+    max-width: 260px;
+  }
+
+  /* Improve hero scroll cue spacing when it appears on ≥768 only; no change on desktop.
+     This block is harmless on mobile because cue is hidden (display:none). */
+  .hero-scroll-cue {
+    margin-top: 34px;
+  }
+
+  /* Nav/mobile menu: avoid horizontal overflow caused by fixed nav + menu.
+     (Useful when iOS toolbars/bounds are quirky.) */
+  .mobile-menu {
+    width: 100%;
+  }
+
+  /* Make section titles/paragraphs resilient on narrow phones */
+  .section-title {
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+
+  .section-desc,
+  .project-desc,
+  .hero-sub {
+    overflow-wrap: anywhere;
+  }
+
+  /* ================================================================
+     Existing project mockup/tablet rules (unchanged behavior)
+     ================================================================ */
   .project-grid {
     gap: 24px;
     margin-top: 32px;
   }
-
 
   .project-card {
     padding: 24px;
@@ -1217,14 +1299,12 @@ html[data-theme="dark"] .macbook-screen {
     position: relative;
   }
 
-
   .mockup-mobile {
     bottom: -30px;
     right: 14px;
     width: 112px;
     height: 244px;
   }
-
 
   .iphone {
     border-radius: 32px;
@@ -1268,10 +1348,60 @@ html[data-theme="dark"] .macbook-screen {
   }
 }
 
+
 @media (max-width: 640px) {
+  /* ---------------------------------------------------------------------
+     Mobile polish (keep desktop EXACTLY the same)
+     --------------------------------------------------------------------- */
+  /* Hero: reduce excessive whitespace + prevent overly aggressive wrapping */
+  .hero {
+    padding-block: 96px 20px; /* less top/bottom whitespace on mobile */
+  }
+  .hero-headline {
+    font-size: 2.0rem;
+    line-height: 1.08;
+    max-width: 18ch;
+  }
+  .hero-sub {
+    font-size: 15.5px;
+    margin-top: 14px;
+    line-height: 1.6;
+  }
+  .hero-inner {
+    gap: 26px; /* tighten vertical spacing */
+  }
+  .hero-actions {
+    margin-top: 18px;
+    gap: 10px;
+  }
+  .btn-accent,
+  .btn-outline {
+    padding-inline: 16px;
+    font-size: 14px;
+  }
+  .hero-tech-label {
+    margin-top: 22px;
+  }
+  .hero-portrait-wrap {
+    max-width: 240px; /* scale image area to avoid whitespace */
+  }
+
+  /* Ensure nav + mobile menu doesn't create layout jumps */
+  .mobile-menu ul {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  /* Contact button + status spacing on very small screens */
+  .form-submit {
+    width: 100%;
+    text-align: center;
+  }
+
   .project-card {
     padding: 20px;
   }
+
 
   .project-header {
     margin-bottom: 20px;
@@ -1634,3 +1764,6 @@ a.contact-link:hover .contact-arrow { transform: translate(2px, -2px); }
 @media (min-width: 640px) {
   .footer-inner { flex-direction: row; justify-content: space-between; text-align: left; }
 }
+
+
+
