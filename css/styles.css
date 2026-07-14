@@ -690,6 +690,10 @@ html[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
   margin-top: 40px;
 }
 
+.project-grid .project-card:not(.is-featured) {
+  display: none;
+}
+
 
 .project-card {
   display: flex;
@@ -1203,6 +1207,226 @@ html[data-theme="dark"] .macbook-screen {
 
 .project-links a:hover svg {
   transform: translateX(2px);
+}
+
+.project-archive {
+  margin-top: 56px;
+  padding-top: 40px;
+  border-top: 1px solid var(--line);
+}
+
+.archive-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 420px);
+  gap: 24px;
+  align-items: end;
+}
+
+.archive-title {
+  margin: 0;
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+}
+
+.archive-copy {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.archive-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.archive-filter,
+.archive-more {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s var(--ease-premium);
+}
+
+.archive-filter {
+  padding: 9px 14px;
+}
+
+.archive-filter:hover,
+.archive-filter.is-active,
+.archive-more:hover {
+  border-color: color-mix(in srgb, var(--accent) 36%, var(--line));
+  background: var(--accent-soft);
+  color: var(--text);
+}
+
+.archive-filter:active,
+.archive-more:active {
+  transform: scale(0.98);
+}
+
+.archive-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.archive-card {
+  display: grid;
+  grid-template-columns: 148px minmax(0, 1fr);
+  min-height: 212px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: color-mix(in srgb, var(--bg-raised) 88%, var(--bg));
+  box-shadow: 0 1px 2px rgba(11, 18, 32, 0.03);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s var(--ease-premium), opacity 0.2s ease;
+}
+
+.archive-card:hover {
+  transform: translateY(-3px);
+  border-color: color-mix(in srgb, var(--accent) 22%, var(--line));
+  box-shadow: var(--shadow-card);
+}
+
+.archive-card.is-hidden {
+  display: none;
+}
+
+.archive-card img {
+  width: 100%;
+  height: 100%;
+  min-height: 212px;
+  object-fit: cover;
+  object-position: top center;
+  border-right: 1px solid var(--line);
+  background: var(--accent-soft);
+}
+
+.archive-card-body {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px;
+}
+
+.archive-card-top {
+  display: grid;
+  gap: 5px;
+}
+
+.archive-type {
+  margin: 0;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.archive-card h4 {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+.archive-card p:not(.archive-type) {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.archive-card a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  width: fit-content;
+  margin-top: auto;
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 600;
+  transition: color 0.2s ease, transform 0.2s var(--ease-premium);
+}
+
+.archive-card a:hover {
+  color: var(--accent);
+  transform: translateX(2px);
+}
+
+.archive-card a svg {
+  width: 16px;
+  height: 16px;
+}
+
+.archive-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 26px;
+}
+
+.archive-actions.is-hidden {
+  display: none;
+}
+
+.archive-more {
+  padding: 10px 18px;
+}
+
+@media (max-width: 900px) {
+  .archive-heading {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .archive-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .project-archive {
+    margin-top: 40px;
+    padding-top: 32px;
+  }
+
+  .archive-title {
+    font-size: 22px;
+  }
+
+  .archive-filters {
+    gap: 8px;
+  }
+
+  .archive-filter {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+
+  .archive-card {
+    grid-template-columns: 1fr;
+  }
+
+  .archive-card img {
+    height: 170px;
+    min-height: 170px;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .archive-card-body {
+    padding: 18px;
+  }
 }
 
 /* Responsive adjustments */

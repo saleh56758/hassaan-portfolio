@@ -126,6 +126,75 @@
     });
   });
 
+  /* ---------------------------------------------------------------------
+     Project archive filters + progressive reveal
+     --------------------------------------------------------------------- */
+  var archive = document.querySelector(".project-archive");
+  if (archive) {
+    var filterButtons = archive.querySelectorAll(".archive-filter");
+    var archiveCards = Array.prototype.slice.call(archive.querySelectorAll(".archive-card"));
+    var moreButton = archive.querySelector(".archive-more");
+    var archiveActions = archive.querySelector(".archive-actions");
+    var visibleLimit = 6;
+    var activeFilter = "all";
+    var expanded = false;
+
+    function getFilteredCards() {
+      return archiveCards.filter(function (card) {
+        if (activeFilter === "all") return true;
+        return (card.getAttribute("data-category") || "").split(" ").indexOf(activeFilter) !== -1;
+      });
+    }
+
+    function renderArchive() {
+      var filteredCards = getFilteredCards();
+
+      archiveCards.forEach(function (card) {
+        card.classList.add("is-hidden");
+      });
+
+      filteredCards.forEach(function (card, index) {
+        if (expanded || index < visibleLimit) {
+          card.classList.remove("is-hidden");
+        }
+      });
+
+      if (!moreButton || !archiveActions) return;
+
+      if (filteredCards.length <= visibleLimit) {
+        archiveActions.classList.add("is-hidden");
+        return;
+      }
+
+      archiveActions.classList.remove("is-hidden");
+      moreButton.textContent = expanded ? "Show fewer projects" : "Show more projects";
+    }
+
+    filterButtons.forEach(function (button) {
+      button.addEventListener("click", function () {
+        activeFilter = button.getAttribute("data-filter") || "all";
+        expanded = false;
+
+        filterButtons.forEach(function (item) {
+          var isActive = item === button;
+          item.classList.toggle("is-active", isActive);
+          item.setAttribute("aria-pressed", String(isActive));
+        });
+
+        renderArchive();
+      });
+    });
+
+    if (moreButton) {
+      moreButton.addEventListener("click", function () {
+        expanded = !expanded;
+        renderArchive();
+      });
+    }
+
+    renderArchive();
+  }
+
   /* -----------------------------------------------------------------------     Contact form — Web3Forms submission
      --------------------------------------------------------------------- */
   var form = document.querySelector(".contact-form");

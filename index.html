@@ -155,8 +155,9 @@
 
       <div class="project-grid">
 
+        <!-- Add is-featured to any project-card you want shown in the large Featured Work area. -->
         <!-- LooksPlus -->
-        <article class="project-card reveal">
+        <article class="project-card reveal is-featured">
           <div class="project-header">
             <h3 class="project-title">LooksPlus</h3>
             <p class="project-desc">Developed a fast, SEO-optimized WordPress website for a non-surgical hair replacement clinic in Patna, featuring online appointment booking, service pages, WhatsApp integration, and a mobile-first design focused on generating local leads.</p>
@@ -206,7 +207,7 @@
         </article>
 
         <!-- Targeted Growth -->
-        <article class="project-card reveal">
+        <article class="project-card reveal is-featured">
           <div class="project-header">
             <h3 class="project-title">Targeted Growth</h3>
             <p class="project-desc">Developed a high-performance WordPress website for a digital marketing agency, featuring conversion-focused landing pages, responsive design, SEO best practices, and strategically placed CTAs to maximize lead generation.</p>
@@ -357,7 +358,7 @@
           </div>
         </article>
         <!-- Shopingia -->
-<article class="project-card reveal">
+<article class="project-card reveal is-featured">
           <div class="project-header">
             <h3 class="project-title">Shopingia</h3>
             <p class="project-desc">Built a modern WordPress eCommerce website with WooCommerce and Elementor, focusing on responsive design, user-friendly navigation, optimized product listings, and a seamless shopping experience across all devices.</p>
@@ -555,7 +556,7 @@
         </article>
 
         <!-- Peptides First -->
-        <article class="project-card reveal">
+        <article class="project-card reveal is-featured">
           <div class="project-header">
             <h3 class="project-title">Peptides First</h3>
             <p class="project-desc">Contributed to the frontend development of a healthcare website by building responsive WordPress pages with Elementor, emphasizing performance, accessibility, and a seamless user experience.</p>
@@ -605,7 +606,7 @@
         </article>
 
         <!-- Aqibac Services -->
-        <article class="project-card reveal">
+        <article class="project-card reveal is-featured">
           <div class="project-header">
             <h3 class="project-title">Aqibac Services</h3>
             <p class="project-desc">Designed and developed a professional WordPress website for an HVAC company, combining modern UI, responsive development, SEO-friendly architecture, and lead-focused user journeys to strengthen its online presence.</p>
@@ -704,6 +705,95 @@
           </div>
         </article>
 
+      </div>
+
+      <div class="project-archive reveal" aria-labelledby="project-archive-title">
+        <div class="archive-heading">
+          <div>
+            <p class="eyebrow">Project Archive</p>
+            <h3 id="project-archive-title" class="archive-title">More shipped work</h3>
+          </div>
+        </div>
+
+        <div class="archive-filters" role="list" aria-label="Filter projects">
+          <button class="archive-filter is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+          <button class="archive-filter" type="button" data-filter="wordpress" aria-pressed="false">WordPress</button>
+          <button class="archive-filter" type="button" data-filter="ecommerce" aria-pressed="false">Ecommerce</button>
+          <button class="archive-filter" type="button" data-filter="service" aria-pressed="false">Service</button>
+          <button class="archive-filter" type="button" data-filter="custom" aria-pressed="false">Custom</button>
+        </div>
+
+        <div class="archive-grid">
+          <!-- Archive cards should be for non-featured projects only, so recruiters do not see duplicates. -->
+          <article class="archive-card" data-category="wordpress ecommerce">
+            <img src="images/placeholders/zylva.webp" alt="Zylva desktop preview" loading="lazy" />
+            <div class="archive-card-body">
+              <div class="archive-card-top">
+                <p class="archive-type">WooCommerce</p>
+                <h4>Zylva</h4>
+              </div>
+              <p>SEO-friendly WooCommerce website for a jewelry brand with responsive product pages and a streamlined shopping journey.</p>
+              <ul class="project-tech"><li>WordPress</li><li>WooCommerce</li><li>Elementor</li></ul>
+              <a href="https://zylva.co/" target="_blank" rel="noopener noreferrer">Visit website <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
+            </div>
+          </article>
+
+          <article class="archive-card" data-category="wordpress service">
+            <img src="images/placeholders/klippare-desktop.webp" alt="klippare desktop preview" loading="lazy" />
+            <div class="archive-card-body">
+              <div class="archive-card-top">
+                <p class="archive-type">Comparison Platform</p>
+                <h4>klippare</h4>
+              </div>
+              <p>WordPress site for a lawn mower comparison platform with responsive layouts, SEO-friendly structure, and product pages.</p>
+              <ul class="project-tech"><li>WordPress</li><li>Elementor</li><li>Technical SEO</li></ul>
+              <a href="https://klipare.iceiy.com/home/" target="_blank" rel="noopener noreferrer">Visit website <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
+            </div>
+          </article>
+
+          <article class="archive-card" data-category="wordpress service">
+            <img src="images/placeholders/salmancenter.webp" alt="Salman Cooling and Geyser Center desktop preview" loading="lazy" />
+            <div class="archive-card-body">
+              <div class="archive-card-top">
+                <p class="archive-type">Service Business</p>
+                <h4>Salman Cooling and Geyser Center</h4>
+              </div>
+              <p>Responsive WordPress site for an HVAC service provider with local SEO, service pages, and inquiry-focused layouts.</p>
+              <ul class="project-tech"><li>WordPress</li><li>Elementor</li><li>Local SEO</li></ul>
+              <a href="https://salman-cooling-geyser.com/" target="_blank" rel="noopener noreferrer">Visit website <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
+            </div>
+          </article>
+
+          <article class="archive-card" data-category="wordpress service">
+            <img src="images/placeholders/infinity-tech.webp" alt="Infinity Tech desktop preview" loading="lazy" />
+            <div class="archive-card-body">
+              <div class="archive-card-top">
+                <p class="archive-type">Agency Website</p>
+                <h4>Infinity Tech</h4>
+              </div>
+              <p>Modern IT services website with responsive service pages, SEO-friendly structure, and conversion-led calls to action.</p>
+              <ul class="project-tech"><li>WordPress</li><li>Elementor</li><li>Responsive</li></ul>
+              <a href="https://infinityfree.iceiy.com/" target="_blank" rel="noopener noreferrer">Visit website <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
+            </div>
+          </article>
+
+          <article class="archive-card" data-category="custom">
+            <img src="images/placeholders/portfolio.webp" alt="Portfolio website desktop preview" loading="lazy" />
+            <div class="archive-card-body">
+              <div class="archive-card-top">
+                <p class="archive-type">Personal Build</p>
+                <h4>Portfolio Website</h4>
+              </div>
+              <p>This site, built with plain HTML, CSS, and JavaScript to keep the stack close to the fundamentals.</p>
+              <ul class="project-tech"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+              <a href="https://github.com/saleh56758/hassaan-portfolio" target="_blank" rel="noopener noreferrer">View code <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
+            </div>
+          </article>
+        </div>
+
+        <div class="archive-actions">
+          <button class="archive-more" type="button">Show more projects</button>
+        </div>
       </div>
     </div>
   </section>
