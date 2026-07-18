@@ -1629,11 +1629,13 @@ html[data-theme="dark"] .macbook-screen {
     padding-right: 18px;
   }
 
+
   /* Contact button + status spacing on very small screens */
   .form-submit {
     width: 100%;
     text-align: center;
   }
+
 
   .project-card {
     padding: 20px;
@@ -1905,8 +1907,8 @@ html[data-theme="dark"] .macbook-screen {
 /* -------------------------------------------------------------------------
    Contact
    ------------------------------------------------------------------------- */
-.contact-grid { display: grid; gap: 32px; max-width: var(--max-width); margin-inline: auto; margin-top: 48px; }
-@media (min-width: 768px) { .contact-grid { grid-template-columns: repeat(2, 1fr); gap: 56px; } }
+.contact-grid { display: grid; gap: 32px; max-width: var(--max-width); margin-inline: auto; margin-top: 40px; }
+@media (min-width: 768px) { .contact-grid { grid-template-columns: repeat(2, 1fr); gap: 48px; } }
 .contact-links { display: flex; flex-direction: column; gap: 14px; }
 .contact-link {
   display: flex;
@@ -1946,6 +1948,7 @@ a.contact-link:hover {
 a.contact-link:hover .contact-arrow { transform: translate(2px, -2px); }
 
 @media (max-width: 640px) {
+
   #contact {
     padding-inline: 16px;
   }
@@ -1954,10 +1957,13 @@ a.contact-link:hover .contact-arrow { transform: translate(2px, -2px); }
     padding-inline: 0;
   }
 
+
   .contact-grid {
     width: 100%;
     max-width: 420px;
+    margin-top: 32px;
   }
+
 
   .contact-link {
     width: 100%;
@@ -1971,6 +1977,7 @@ a.contact-link:hover .contact-arrow { transform: translate(2px, -2px); }
     overflow-wrap: anywhere;
   }
 }
+
 
 .contact-form {
   display: flex;
