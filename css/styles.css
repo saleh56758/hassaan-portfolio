@@ -1945,6 +1945,33 @@ a.contact-link:hover {
 .contact-arrow { margin-left: auto; flex-shrink: 0; width: 15px; height: 15px; color: var(--text-faintest); transition: transform 0.2s var(--ease-premium); }
 a.contact-link:hover .contact-arrow { transform: translate(2px, -2px); }
 
+@media (max-width: 640px) {
+  #contact {
+    padding-inline: 16px;
+  }
+
+  #contact .wrap {
+    padding-inline: 0;
+  }
+
+  .contact-grid {
+    width: 100%;
+    max-width: 420px;
+  }
+
+  .contact-link {
+    width: 100%;
+    min-width: 0;
+    padding: 14px;
+    gap: 12px;
+  }
+
+  .contact-value {
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+}
+
 .contact-form {
   display: flex;
   flex-direction: column;
