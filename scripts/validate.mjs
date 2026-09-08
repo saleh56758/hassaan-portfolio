@@ -19,8 +19,12 @@ for (const target of html.matchAll(/href=["']#([^"']+)["']/g)) {
   if (!ids.has(target[1])) errors.push(`Missing anchor target: #${target[1]}`);
 }
 
-for (const required of ["index.html", "css/styles.css", "js/main.js", "resume/Hassaan-Saleh-Resume.pdf"]) {
+for (const required of ["index.html", "css/styles.css", "js/main.js", "js/theme-init.js", "resume/Hassaan-Saleh-Resume.pdf"]) {
   if (!existsSync(join(root, required))) errors.push(`Missing required file: ${required}`);
+}
+
+if (/<script(?![^>]*\bsrc=)/i.test(html)) {
+  errors.push("Inline scripts are not allowed because the Content Security Policy only permits local scripts.");
 }
 
 if (errors.length) {
