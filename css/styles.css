@@ -1946,8 +1946,13 @@ html[data-theme="dark"] .macbook-screen {
   gap: 18px;
   margin-top: 48px;
 }
+.education-heading { margin-top: 64px; }
+.education-grid { margin-top: 24px; }
 @media (min-width: 640px) { .skills-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: 1024px) { .skills-grid { grid-template-columns: repeat(4, 1fr); } }
+@media (min-width: 1024px) {
+  .skills-grid { grid-template-columns: repeat(4, 1fr); }
+  .education-grid { grid-template-columns: repeat(2, 1fr); }
+}
 .skill-card {
   border-radius: 16px;
   border: 1px solid var(--line);
