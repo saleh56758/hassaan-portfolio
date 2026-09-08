@@ -202,8 +202,7 @@
     var submitBtn = form.querySelector('button[type="submit"]');
     var status = form.querySelector(".form-status");
 
-    var ACCESS_KEY = "7dff58bd-242e-4074-8dd9-284b3bdb9bbd";
-    var ENDPOINT = "https://api.web3forms.com/submit";
+    var ENDPOINT = "/api/contact";
 
     var isSubmitting = false;
 
@@ -241,10 +240,12 @@
       var nameEl = form.querySelector("#name");
       var emailEl = form.querySelector("#email");
       var msgEl = form.querySelector("#message");
+      var websiteEl = form.querySelector("#website");
 
       var name = nameEl ? nameEl.value.trim() : "";
       var email = emailEl ? emailEl.value.trim() : "";
       var message = msgEl ? msgEl.value.trim() : "";
+      var website = websiteEl ? websiteEl.value.trim() : "";
 
       // Keep browser-required behavior, but guard against empty values.
       if (!name || !email || !message) {
@@ -259,15 +260,10 @@
 
       (async function () {
         try {
-          var formData = new FormData();
-          formData.append("access_key", ACCESS_KEY);
-          formData.append("name", name);
-          formData.append("email", email);
-          formData.append("message", message);
-
           var response = await fetch(ENDPOINT, {
             method: "POST",
-            body: formData
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ name: name, email: email, message: message, website: website })
           });
 
           var data = await response.json().catch(function () {
@@ -291,6 +287,7 @@
           if (nameEl) nameEl.value = "";
           if (emailEl) emailEl.value = "";
           if (msgEl) msgEl.value = "";
+          if (websiteEl) websiteEl.value = "";
         } catch (err) {
           var msg = err && err.message ? err.message : "Something went wrong. Please try again.";
           setStatus("Error: " + msg, true);

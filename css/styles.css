@@ -1780,7 +1780,19 @@ html[data-theme="dark"] .macbook-screen {
 
 
   /* Contact button + status spacing on very small screens */
-  .form-submit {
+  .form-honeypot {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.form-submit {
     width: 100%;
     text-align: center;
   }
@@ -2156,6 +2168,18 @@ a.contact-link:hover .contact-arrow { transform: translate(2px, -2px); }
   box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 15%, transparent);
 }
 .form-field textarea { resize: none; }
+.form-honeypot {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .form-submit {
   margin-top: 4px;
   border-radius: 999px;
