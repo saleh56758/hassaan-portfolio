@@ -1,6 +1,7 @@
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const RATE_LIMIT_WINDOW_MS = 60_000;
 const MAX_REQUESTS_PER_WINDOW = 5;
+const FALLBACK_WEB3FORMS_ACCESS_KEY = "68072f47-7e3e-4b52-b502-9e018f69b117";
 const requestCounts = new Map();
 
 function getClientAddress(request) {
@@ -69,7 +70,7 @@ export default async function handler(request, response) {
     return response.status(400).json({ error: "Please provide valid form details." });
   }
 
-  const accessKey = process.env.WEB3FORMS_ACCESS_KEY;
+  const accessKey = process.env.WEB3FORMS_ACCESS_KEY || FALLBACK_WEB3FORMS_ACCESS_KEY;
   if (!accessKey) return response.status(503).json({ error: "Contact service is not configured." });
 
   try {
