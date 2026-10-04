@@ -202,8 +202,6 @@
     var submitBtn = form.querySelector('button[type="submit"]');
     var status = form.querySelector(".form-status");
 
-    var ENDPOINT = "/api/contact";
-
     var isSubmitting = false;
 
     function setStatus(text, visible) {
@@ -255,30 +253,42 @@
         return;
       }
 
+      if (website) {
+        setStatus("Your message could not be verified. Please try again.", true);
+        isSubmitting = false;
+        setLoading(false);
+        return;
+      }
+
       setStatus("Sending your message...", true);
       setLoading(true);
 
       (async function () {
         try {
-          var response = await fetch(ENDPOINT, {
+          var formData = new FormData(form);
+          var response = await fetch(form.action, {
             method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ name: name, email: email, message: message, website: website })
+            headers: {
+              "Content-Type": "application/json",
+              Accept: "application/json"
+            },
+            body: JSON.stringify({
+              access_key: formData.get("access_key"),
+              name: name,
+              email: email,
+              message: message
+            })
           });
 
           var data = await response.json().catch(function () {
             return null;
           });
 
-          if (!response.ok) {
+          if (!response.ok || !data || data.success !== true) {
             throw new Error(
               (data && (data.message || data.error)) ||
                 "Submission failed. Please try again."
             );
-          }
-
-          if (data && data.success === false) {
-            throw new Error(data.message || "Submission failed. Please try again.");
           }
 
           setStatus("Message sent successfully — I’ll get back to you soon.", true);
