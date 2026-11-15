@@ -164,6 +164,15 @@ html[data-theme="dark"] .about-photo img { mix-blend-mode: normal; }
 .experience-company { margin: 6px 0 16px; color: var(--accent); font-size: 13px; font-weight: 600; }
 .experience-item ul { margin: 0; padding-left: 18px; color: var(--muted); font-size: 13px; }
 .experience-item li { padding-block: 5px; }
+.certification-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px 42px; }
+.certification-item { padding-top: 17px; border-top: 1px solid var(--line); }
+.certification-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; }
+.certification-heading h3 { margin: 0; font: 600 22px var(--display); }
+.certification-heading time { flex: 0 0 auto; color: var(--muted); font: 10px var(--mono); }
+.certification-item .experience-company { margin-bottom: 10px; }
+.certification-details { margin-bottom: 14px; color: var(--muted); font-size: 13px; }
+.certification-link { display: inline-flex; align-items: center; gap: 8px; color: var(--ink); font-size: 12px; font-weight: 600; }
+.certification-link span { color: var(--accent); }
 .skills-section { padding-block: 95px 105px; }
 .skills-section .section-top { align-items: end; }
 .skills-note { max-width: 310px; margin: 0 0 4px; color: var(--muted); font-size: 13px; }
@@ -308,8 +317,10 @@ html[data-theme="dark"] .about-photo img { mix-blend-mode: normal; }
   .experience-layout { grid-template-columns: 1fr; gap: 32px; }
   .experience-layout h2 { font-size: 36px; }
   .experience-heading { flex-direction: column; gap: 5px; }
+  .certification-grid { grid-template-columns: 1fr; gap: 25px; }
+  .certification-heading h3 { font-size: 20px; }
   .skills-section { padding-block: 67px 75px; }
-  .skills-section .section-top { flex-direction: column; }
+  .skills-section .section-top { flex-direction: column; align-items: stretch; }
   .skills-note { max-width: 400px; }
   .skills-lines > div { grid-template-columns: 1fr; gap: 4px; padding-block: 14px; }
   .contact-page { padding-block: 68px 76px; }
